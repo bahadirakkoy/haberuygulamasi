@@ -16,7 +16,7 @@ class Iletisim extends StatelessWidget {
       textColor: Colors.teal.shade900,
       logo: MemoryImage(base64Decode(image)),
       email: 'deneme@gmail.com',
-      companyName: 'Babuşka Sensoy',
+      companyName: 'Halit Bakır',
       companyColor: Colors.teal.shade100,
       dividerThickness: 2,
       phoneNumber: '+9542111111',

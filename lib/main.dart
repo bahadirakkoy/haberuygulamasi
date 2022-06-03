@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:haberuygulamasi/galeri.dart';
 import 'package:haberuygulamasi/haberler.dart';
 import 'package:haberuygulamasi/hakkimizda.dart';
 import 'package:haberuygulamasi/iletisim.dart';
@@ -40,6 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
   //menü butonlara basıldıkça içeri yüklenecek sayfafar
   static const List<Widget> _sayfalar = <Widget>[
     Haberler(),
+    Galeri(),
     Hakkimizda(),
     Iletisim()
   ];
@@ -47,6 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
   //menü butonlara basıldıkça değişecek başlıklar
   static const List<String> _sayfaBaslgi = <String>[
     "Anasayfa",
+    "Galeri",
     "Hakkımızda",
     "İletişim"
   ];
@@ -58,10 +61,15 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(_sayfaBaslgi.elementAt(_aktifSayfa)),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.newspaper),
             label: 'Haberler',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.photo_album),
+            label: 'Galeri',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.info),
