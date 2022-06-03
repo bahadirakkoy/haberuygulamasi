@@ -42,9 +42,9 @@ class _HaberlerState extends State<Haberler> {
                 padding: const EdgeInsets.all(8),
                 itemCount: snapshot.data!.items?.length,
                 itemBuilder: (BuildContext context, int index) {
-                  var title = snapshot.data!.items?[0].title;
-                  var description = snapshot.data!.items?[0].description;
-                  var link = snapshot.data!.items?[0].link;
+                  var title = snapshot.data!.items?[index].title;
+                  var description = snapshot.data!.items?[index].description;
+                  var link = snapshot.data!.items?[index].link;
 
                   return Card(
                     elevation: 4,
